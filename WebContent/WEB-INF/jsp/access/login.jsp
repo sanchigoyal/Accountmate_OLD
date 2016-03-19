@@ -55,7 +55,6 @@
 	</div>
 
 	<div class="container">
-	  <!-- Example row of columns -->
 	  <div class="row">
 		<div class="col-md-4">
 		  <h2>What we do?</h2>
@@ -83,9 +82,21 @@
 			<h2 class="text-center">Sanchi Goyal<br>
 				<small>Lead Designer & Developer</small></h2>
 			<ul class="list-inline text-center">
-			  <li><i class="fa fa-twitter-square fa-2x"></i></li>
-			  <li><i class="fa fa-linkedin-square fa-2x"></i></li>
-			  <li><i class="fa fa-facebook-square fa-2x"></i></li>
+			  <li>
+			  	<a href="https://twitter.com/" target="_blank" class="social-icon">
+			  		<i class="fa fa-twitter-square fa-2x"></i>
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="https://www.linkedin.com/in/sanchi-goyal-45312761" target="_blank" class="social-icon">
+			  		<i class="fa fa-linkedin-square fa-2x"></i>
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="https://www.facebook.com/sanchi.goyal.1" target="_blank" class="social-icon">
+			  		<i class="fa fa-facebook-square fa-2x"></i>
+			  	</a>
+			  </li>
 			</ul>
 		</div>
 	  </div>
