@@ -13,6 +13,7 @@
   
 	<!-- Header -->
     <%@include file="../layout/header-login.jsp" %>
+    <link href="resources/css/login.css" rel="stylesheet">
 	<!-- -- --- -->
 	
     <div class="jumbotron">
@@ -29,15 +30,15 @@
 		              <strong>Oh snap!</strong> Invalid email or password !!
 		            </div>
 		        </div>
-				<form id="loginForm" class="form-horizontal" action="" method="post">
+				<form id="signupForm" class="form-horizontal" action="/Accountmate/signup" method="post">
 					<div class="form-group">
 						<div class="col-md-12">
-							<input type="email" class="form-control" id="email" name="userEmail" placeholder="Your email address">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-							<input type="password" class="form-control" id="password" name="userPassword" placeholder="Create a password">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Create a password">
 							<p>Use at least one letter, one numeral, and seven characters.</p>
 						</div>
 					</div>
@@ -79,8 +80,8 @@
 		</div>
 		<div class=" col-md-offset-4 col-md-4">
 			<img class="img-circle img-center" src="resources/images/team/sanchi.JPG" width="200" height="200">
-			<h2 class="text-center">Sanchi Goyal</h2>
-			<h3 class="text-center img-designation">Lead Designer & Developer</h3>
+			<h2 class="text-center">Sanchi Goyal<br>
+				<small>Lead Designer & Developer</small></h2>
 			<ul class="list-inline text-center">
 			  <li><i class="fa fa-twitter-square fa-2x"></i></li>
 			  <li><i class="fa fa-linkedin-square fa-2x"></i></li>
@@ -92,5 +93,6 @@
 		
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
+    <script src="resources/js/login.js"></script>
   </body>
 </html>

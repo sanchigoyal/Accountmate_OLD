@@ -5,9 +5,11 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.am.constants.UserConstants;
+import com.am.model.UserProfile;
 
 @Controller
 public class LoginController {
@@ -38,5 +40,13 @@ public class LoginController {
 			}
 			
 	      return "access/login";
+	   }
+	
+	@RequestMapping("/signup")
+	   public String getSignupPage(@ModelAttribute("Accountmate")UserProfile user,HttpServletRequest request,ModelMap model) {
+		  System.out.println("Email -------"+user.getEmail());
+		  System.out.println("Password --------"+user.getPassword());
+		  model.addAttribute("user",user);
+		  return "access/signup";
 	   }
 }

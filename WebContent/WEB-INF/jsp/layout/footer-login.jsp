@@ -41,3 +41,5 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="resources/js/jquery.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/formValidation.min.js"></script>
+<script src="resources/js/bootstrap.mod.min.js"></script>

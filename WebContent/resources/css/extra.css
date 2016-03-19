@@ -6,11 +6,9 @@
     margin-right: auto;
 }
 
-.img-designation{
-	margin-top:5px;
-	color: #777777; /*GREY*/
+.hideIt{
+	display:none;
 }
-
 
 .extraPadding20{
 	padding-left:20px;

@@ -7,6 +7,8 @@
 <link href="resources/css/navbar.css" rel="stylesheet">
 <link href="resources/css/extra.css" rel="stylesheet">
 <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+<link href="resources/css/wizard.css" rel="stylesheet">
+<link href="resources/css/formValidation.min.css" rel="stylesheet">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
