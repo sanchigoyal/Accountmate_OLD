@@ -1,0 +1,11 @@
+/* Navbar Customatisation */
+
+.navbar-default{
+	background-color :white;
+	border-color :white;
+}
+
+.navbar-default .navbar-brand{
+	color:#000;
+}
+

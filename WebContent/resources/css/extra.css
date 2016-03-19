@@ -1,0 +1,37 @@
+/* Additional custom css */
+
+.img-center{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-designation{
+	margin-top:5px;
+	color: #777777; /*GREY*/
+}
+
+
+.extraPadding20{
+	padding-left:20px;
+}
+.extraPaddingLeftRight5{
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.extraPaddingRight20{
+	padding-right:20px;
+}
+
+.extraPaddingRight10{
+	padding-right:10px;
+}
+
+.extraPaddingTop20{
+	padding-top:20px;
+}
+
+.extraPaddingBottom20{
+	padding-bottom:20px;
+}
