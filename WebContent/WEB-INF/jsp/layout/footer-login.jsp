@@ -43,3 +43,6 @@
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/formValidation.min.js"></script>
 <script src="resources/js/bootstrap.mod.min.js"></script>
+<script src="resources/js/bootstrap-formhelper-min.js"></script>
+<script src="resources/js/bootstrap-switch.js"></script>
+<script src="resources/js/bootstrap-wizard.js"></script>

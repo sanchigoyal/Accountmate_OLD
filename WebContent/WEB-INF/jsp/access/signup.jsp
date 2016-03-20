@@ -23,7 +23,7 @@
 					</h3>
 				</div>
 				<div class="col-md-12">
-					<form class="form-horizontal" action="/AccountmateWS2/signup" id="registrationForm" method="post" enctype="multipart/form-data">
+					<form class="form-horizontal" action="/Accountmate/register" id="registrationForm" method="post" enctype="multipart/form-data">
 						<ul class="nav nav-pills wizard-pills">
 							<li class="active"><a href="#about" data-toggle="tab" class="not-active">About</a></li>
 							<li><a href="#account" data-toggle="tab" class="not-active">Account</a></li>
@@ -52,7 +52,7 @@
 								<div class="col-sm-10 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
 									   <label for="email" class="control-label">Email</label>
-									   <input id ="email" type="email" class="form-control input-sm" name="userEmail" placeholder="Enter Email... " value="${user.email}"/>
+									   <input id ="email" type="email" class="form-control input-sm" name="email" placeholder="Enter Email... " value="${user.email}"/>
 									 </div>
 								</div>
 								<div class="col-sm-4 col-sm-offset-1">
@@ -138,5 +138,6 @@
 		</div>
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
+    <script src="resources/js/signup-min.js"></script>
   </body>
 </html>
