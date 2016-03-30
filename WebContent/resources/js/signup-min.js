@@ -25,7 +25,7 @@
 	            // This option will not ignore invisible fields which belong to inactive panels
 	            excluded: ':disabled',
 	            fields: {
-	            	contactFirstName: {
+	            	firstName: {
 		                message: 'The firstname is not valid',
 		                validators: {
 		                    notEmpty: {
@@ -42,7 +42,7 @@
 		                    }
 		                }
 		            },
-		            contactLastName: {
+		            lastName: {
 		                message: 'The lastname is not valid',
 		                validators: {
 		                    notEmpty: {
@@ -76,15 +76,15 @@
 		                    }
 		                }
 		            },
-		            userPassword: {
+		            password: {
 		                validators: {
 		                    notEmpty: {
 		                        message: 'The password is required and cannot be empty'
 		                    },
-		                    stringLength: {
-		                        min: 8,
-		                        message: 'The password must have at least 8 characters'
-		                    }
+		                    regexp:{
+			                	regexp:"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$@!%?&]).{7,12}$",
+			                	message: 'The password should contain Minimum 7 and Maximum 12 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character'
+			                }
 		                }
 		            },
 		            repassword: {
@@ -98,24 +98,24 @@
 		                    }
 		                }
 		            },
-		            accountName: {
-		                message: 'The Account/Business name is not valid',
+		            'companies[].companyName': {
+		                message: 'The Company/Business name is not valid',
 		                validators: {
 		                    notEmpty: {
-		                        message: 'The Account/Business name is required and cannot be empty'
+		                        message: 'The Company/Business name is required and cannot be empty'
 		                    },
 		                    stringLength: {
 		                        min: 3,
 		                        max: 50,
-		                        message: 'The Account/Business name must be more than 3 and less than 50 characters long'
+		                        message: 'The Company/Business name must be more than 3 and less than 50 characters long'
 		                    },
 		                    regexp: {
 		                        regexp: /^[a-z A-Z]+$/,
-		                        message: 'The Account/Business name can only consist of alphabets'
+		                        message: 'The Company/Business name can only consist of alphabets'
 		                    }
 		                }
 		            },
-		            userPhoneNumber: {
+		            'companies[].phoneNumber': {
 		                message: 'The phone number is not valid',
 		                validators: {
 		                    notEmpty: {
@@ -131,7 +131,7 @@
 		                    }
 		                }
 		            },
-		            userAddress: {
+		            'companies[].address': {
 		                message: 'The address is not valid',
 		                validators: {
 		                    notEmpty: {

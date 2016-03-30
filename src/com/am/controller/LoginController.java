@@ -3,6 +3,7 @@ package com.am.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,9 +14,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.am.constants.UserConstants;
 import com.am.model.UserProfile;
+import com.am.services.UserServices;
 
 @Controller
 public class LoginController {
+	
+	private UserServices userServices;
+	static Logger LOGGER = Logger.getLogger(LoginController.class.getClass());
+	
+	public void setUserServices(UserServices userServices){
+		this.userServices = userServices;
+	}
 	
 	@RequestMapping("/login")
 	   public String getLoginPage(HttpServletRequest request,ModelMap model) {
@@ -47,17 +56,24 @@ public class LoginController {
 	
 	@RequestMapping("/signup")
 	   public String getSignupPage(@ModelAttribute("Accountmate")UserProfile user,HttpServletRequest request,ModelMap model) {
-		  System.out.println("Email -------"+user.getEmail());
-		  System.out.println("Password --------"+user.getPassword());
 		  model.addAttribute("user",user);
 		  return "access/signup";
 	   }
 	
 	@RequestMapping(value = "/checkEmailAvailibility", method = RequestMethod.GET)
 	public @ResponseBody String checkEmailAvailibility(@RequestParam("email") String email) {
-//		if(userDAO.checkEmailAvailibility(email)){
-//			return  "{\"valid\":true}";
-//		}
+		if(userServices.checkEmailAvailabity(email)){
+			return  "{\"valid\":true}";
+		}
 		return "{\"valid\":true}";
+	}
+	
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String registerUser(@ModelAttribute("Accountmate")UserProfile user,HttpServletRequest request,ModelMap model){
+		/*
+		 * Put the logic for registration
+		 */
+		userServices.addUser(user);
+		return "redirect:/home";
 	}
 }

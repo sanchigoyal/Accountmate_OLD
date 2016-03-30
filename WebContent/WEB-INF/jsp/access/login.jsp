@@ -39,7 +39,6 @@
 					<div class="form-group">
 						<div class="col-md-12">
 							<input type="password" class="form-control" id="password" name="password" placeholder="Create a password">
-							<p>Use at least one letter, one numeral, and seven characters.</p>
 						</div>
 					</div>
 					<div class="form-group">

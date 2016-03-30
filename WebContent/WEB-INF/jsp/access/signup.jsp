@@ -42,11 +42,11 @@
 								<div class="col-sm-6">
 									<div class="required form-group-sm form-group">
 									   <label for="firstname" class="control-label">First Name</label>
-									   <input type="text" id="firstname" name="contactFirstName" class="form-control input-sm" placeholder="Enter First Name..."/>
+									   <input type="text" id="firstname" name="firstName" class="form-control input-sm" placeholder="Enter First Name..."/>
 									 </div>
 									 <div class="required form-group form-group-sm">
 									   <label for="lastname" class="control-label">Last Name</label>
-									  <input type="text" id="lastname" name="contactLastName" class="form-control input-sm" placeholder="Enter Last Name..."/>
+									  <input type="text" id="lastname" name="lastName" class="form-control input-sm" placeholder="Enter Last Name..."/>
 									 </div>
 								</div>
 								<div class="col-sm-10 col-sm-offset-1">
@@ -58,7 +58,7 @@
 								<div class="col-sm-4 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
 									   <label for="password" class="control-label">Password</label>
-									   <input type="password" class="form-control input-sm" id="password" name="userPassword" placeholder="Enter Password..." value="${user.password}"/>
+									   <input type="password" class="form-control input-sm" id="password" name="password" placeholder="Enter Password..." value="${user.password}"/>
 									 </div>
 								</div>
 								<div class="col-sm-offset-2 col-sm-4">
@@ -69,36 +69,36 @@
 								</div>					
 							</div>
 							<div class="tab-pane" id="account" style="min-height:350px;">
-								<h4 class="text-center"> Let's create an account</h4>
+								<h4 class="text-center"> Let's create your first company</h4>
 								<div class="col-sm-10 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
-										<label for="accountname" class="control-label">Account</label>
-										<input type="text" class="form-control input-sm" id="accountname" name="accountName" placeholder="Enter Account/Business Name... "/>
+										<label for="companyname" class="control-label">Company</label>
+										<input type="text" class="form-control input-sm" id="companyname" name="companies[].companyName" placeholder="Enter Company/Business Name... "/>
 									</div>
 								</div>
 								<div class="col-sm-5 col-sm-offset-1">
 									<div class="form-group form-group-sm">
 										<label for="phonenumber" class="control-label">Phone Number</label>
-										<input type="text" class="form-control input-sm" id="phonenumber" name="userPhoneNumber" placeholder="Enter Phone Number... "/>
+										<input type="text" class="form-control input-sm" id="phonenumber" name="companies[].phoneNumber" placeholder="Enter Phone Number... "/>
 									</div>
 								</div>
 								<div class="col-sm-10 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
 										<label for="address" class="control-label">Street/Building</label>
-										<input type="text" class="form-control input-sm"  id="address" name="userAddress" placeholder="Enter Street/Building... "/>
+										<input type="text" class="form-control input-sm"  id="address" name="companies[].address" placeholder="Enter Street/Building... "/>
 									</div>
 								</div>
 								<div class="col-sm-5 col-sm-offset-1">
 									<div class="form-group">
 										<label for="country" class="control-label">Country</label>
-										<div id="countries_states2" class="bfh-selectbox bfh-countries bfh-small" data-country="IN" data-name="userCountry" data-blank="false">
+										<div id="countries_states2" class="bfh-selectbox bfh-countries bfh-small" data-country="IN" data-name="companies[].country" data-blank="false">
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-5">
 									<div class="required form-group">
 										<label for="state" class="control-label">State</label>
-										<div class="bfh-selectbox bfh-states bfh-small" data-country="countries_states2" data-state='AN' data-name="userState" data-blank="false">
+										<div class="bfh-selectbox bfh-states bfh-small" data-country="countries_states2" data-state='AN' data-name="companies[].state" data-blank="false">
 										</div>
 									</div>
 								</div>
@@ -109,7 +109,7 @@
 									<div class="form-group form-group-sm">
 										<label for="itemWiseDiscont" class="control-label col-sm-8" style="padding-top:0px;">Item-wise discount</label>
 										<div class="col-sm-4">
-											<input id="itemWiseDiscount" name="itemWiseDiscount" class="form-control on-off" type="checkbox" data-size="mini" data-off-color="warning">
+											<input id="itemWiseDiscount" name="settings.itemWiseDiscount" class="form-control on-off" type="checkbox" data-size="mini" data-off-color="warning">
 										</div>
 									</div>
 								</div>
@@ -117,7 +117,7 @@
 									<div class="form-group form-group-sm">
 										<label for="itemWiseVat" class="control-label col-sm-8" style="padding-top:0px;">Item-wise VAT</label>
 										<div class="col-sm-4">
-											<input id="itemWiseVat" class="form-control on-off" name="itemWiseVat" type="checkbox" data-size="mini" data-off-color="warning">
+											<input id="itemWiseVat" class="form-control on-off" name="settings.itemWiseVat" type="checkbox" data-size="mini" data-off-color="warning">
 										</div>
 									</div>
 								</div>
@@ -126,11 +126,13 @@
 								</div>
 							</div>
 							
-							<!-- Previous/Next buttons -->
-							<ul class="pager wizard">
-								<li class="previous"><a href="javascript: void(0);">Previous</a></li>
-								<li class="next"><a href="javascript: void(0);">Next</a></li>
-							</ul>
+							<div class="col-md-12">
+								<!-- Previous/Next buttons -->
+								<ul class="pager wizard">
+									<li class="previous"><a href="javascript: void(0);">Previous</a></li>
+									<li class="next"><a href="javascript: void(0);">Next</a></li>
+								</ul>
+							</div>
 						</div>
 					</form>
 				</div>

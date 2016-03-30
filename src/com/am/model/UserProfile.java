@@ -6,13 +6,18 @@ public class UserProfile {
 	private int userID;
 	private String firstName;
 	private String lastName;
-	private String address;
-	private String phoneNumber;
-	private String state;
-	private String country;
 	private String email;
 	private String password;
 	private Set<Company> companies;
+	private UserSettings setting;
+	
+	
+	public UserSettings getSetting() {
+		return setting;
+	}
+	public void setSetting(UserSettings setting) {
+		this.setting = setting;
+	}
 	public int getUserID() {
 		return userID;
 	}
@@ -30,30 +35,6 @@ public class UserProfile {
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
 	}
 	public String getEmail() {
 		return email;

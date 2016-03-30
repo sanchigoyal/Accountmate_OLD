@@ -30,11 +30,11 @@ $(document).ready(function() {
 										                notEmpty: {
 										                    message: 'The password is required and cannot be empty'
 										                },
-										                stringLength: {
-										                    min: 7,
-										                    message: 'The password must have at least 7 characters'
-										                    }
+										                regexp:{
+										                	regexp:"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$@!%?&]).{7,12}$",
+										                	message: 'The password should contain Minimum 7 and Maximum 12 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character'
 										                }
+										               }
 										            } 
 										        }
 										    });
