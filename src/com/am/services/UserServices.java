@@ -50,4 +50,12 @@ public interface UserServices {
 	 * @return
 	 */
 	public boolean validateUser(UserProfile user);
+	
+	/**
+	 * Method to validate i/p email
+	 * This is done because there isn't any client level validation
+	 * @param email
+	 * @return
+	 */
+	public boolean validateEmail(String email);
 }

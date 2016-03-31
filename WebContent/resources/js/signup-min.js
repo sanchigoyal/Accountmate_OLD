@@ -98,7 +98,7 @@
 		                    }
 		                }
 		            },
-		            'companies[].companyName': {
+		            companyName: {
 		                message: 'The Company/Business name is not valid',
 		                validators: {
 		                    notEmpty: {
@@ -115,7 +115,7 @@
 		                    }
 		                }
 		            },
-		            'companies[].phoneNumber': {
+		            phoneNumber: {
 		                message: 'The phone number is not valid',
 		                validators: {
 		                    notEmpty: {
@@ -131,7 +131,7 @@
 		                    }
 		                }
 		            },
-		            'companies[].address': {
+		            address: {
 		                message: 'The address is not valid',
 		                validators: {
 		                    notEmpty: {

@@ -73,32 +73,32 @@
 								<div class="col-sm-10 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
 										<label for="companyname" class="control-label">Company</label>
-										<input type="text" class="form-control input-sm" id="companyname" name="companies[].companyName" placeholder="Enter Company/Business Name... "/>
+										<input type="text" class="form-control input-sm" id="companyname" name="companyName" placeholder="Enter Company/Business Name... "/>
 									</div>
 								</div>
 								<div class="col-sm-5 col-sm-offset-1">
 									<div class="form-group form-group-sm">
 										<label for="phonenumber" class="control-label">Phone Number</label>
-										<input type="text" class="form-control input-sm" id="phonenumber" name="companies[].phoneNumber" placeholder="Enter Phone Number... "/>
+										<input type="text" class="form-control input-sm" id="phonenumber" name="phoneNumber" placeholder="Enter Phone Number... "/>
 									</div>
 								</div>
 								<div class="col-sm-10 col-sm-offset-1">
 									<div class="required form-group form-group-sm">
 										<label for="address" class="control-label">Street/Building</label>
-										<input type="text" class="form-control input-sm"  id="address" name="companies[].address" placeholder="Enter Street/Building... "/>
+										<input type="text" class="form-control input-sm"  id="address" name="address" placeholder="Enter Street/Building... "/>
 									</div>
 								</div>
 								<div class="col-sm-5 col-sm-offset-1">
 									<div class="form-group">
 										<label for="country" class="control-label">Country</label>
-										<div id="countries_states2" class="bfh-selectbox bfh-countries bfh-small" data-country="IN" data-name="companies[].country" data-blank="false">
+										<div id="countries_states2" class="bfh-selectbox bfh-countries bfh-small" data-country="IN" data-name="country" data-blank="false">
 										</div>
 									</div>
 								</div>
 								<div class="col-sm-5">
 									<div class="required form-group">
 										<label for="state" class="control-label">State</label>
-										<div class="bfh-selectbox bfh-states bfh-small" data-country="countries_states2" data-state='AN' data-name="companies[].state" data-blank="false">
+										<div class="bfh-selectbox bfh-states bfh-small" data-country="countries_states2" data-state='AN' data-name="state" data-blank="false">
 										</div>
 									</div>
 								</div>
@@ -109,7 +109,7 @@
 									<div class="form-group form-group-sm">
 										<label for="itemWiseDiscont" class="control-label col-sm-8" style="padding-top:0px;">Item-wise discount</label>
 										<div class="col-sm-4">
-											<input id="itemWiseDiscount" name="settings.itemWiseDiscount" class="form-control on-off" type="checkbox" data-size="mini" data-off-color="warning">
+											<input id="itemWiseDiscount" name="itemWiseDiscount" class="form-control on-off" type="checkbox" data-size="mini" data-off-color="warning">
 										</div>
 									</div>
 								</div>
@@ -117,7 +117,7 @@
 									<div class="form-group form-group-sm">
 										<label for="itemWiseVat" class="control-label col-sm-8" style="padding-top:0px;">Item-wise VAT</label>
 										<div class="col-sm-4">
-											<input id="itemWiseVat" class="form-control on-off" name="settings.itemWiseVat" type="checkbox" data-size="mini" data-off-color="warning">
+											<input id="itemWiseVat" class="form-control on-off" name="itemWiseVat" type="checkbox" data-size="mini" data-off-color="warning">
 										</div>
 									</div>
 								</div>

@@ -15,12 +15,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class LoginInterceptor implements HandlerInterceptor {
 	
+	private static final String INDEX_URL = "/Accountmate/index";
 	/*
 	 * These are those URIs which do not require users to login
 	 */
-	private static final String[] NON_SECURE_URI = {"/Accountmate/login",
+	private static final String[] NON_SECURE_URI = {INDEX_URL,
 													"/Accountmate/checkEmailAvailibility",
-													"/Accountmate/signup"};
+													"/Accountmate/signup",
+													"/Accountmate/register",
+													"/Accountmate/login",
+													"/Accountmate/loginError"};
+	
 	private static final String[] AJAX_SECURE_URI = {"/Accountmate/getEditItemPage"};
 	@Override
     public boolean preHandle(HttpServletRequest request,
@@ -36,7 +41,7 @@ public class LoginInterceptor implements HandlerInterceptor {
  					if(Arrays.asList(AJAX_SECURE_URI).contains(request.getRequestURI())){
  						response.sendRedirect("/Accountmate/handleAjaxSessionTimeout");
  					}else{
- 						response.sendRedirect("/Accountmate/login");
+ 						response.sendRedirect(INDEX_URL);
  					}
  					return false;
  				}	
@@ -46,7 +51,7 @@ public class LoginInterceptor implements HandlerInterceptor {
  				if(Arrays.asList(AJAX_SECURE_URI).contains(request.getRequestURI())){
 						response.sendRedirect("/Accountmate/handleAjaxSessionTimeout");
 					}else{
-						response.sendRedirect("/Accountmate/login");
+						response.sendRedirect(INDEX_URL);
 				}
 	     		return false;
  			}

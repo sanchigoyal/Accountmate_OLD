@@ -12,97 +12,59 @@
   <body>
   
 	<!-- Header -->
-    <%@include file="../layout/header-login.jsp" %>
-    <link href="resources/css/login.css" rel="stylesheet">
+    <%@include file="../layout/header-simple.jsp" %>
 	<!-- -- --- -->
 	
-    <div class="jumbotron">
-	  <div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h1>Let's build your business</h1>
-				<p>This is a startup that helps you build and manage your business efficiently.</p>
-			</div>
-			<div class="col-md-4 col-md-offset-2">
-				<div id="failure" class="hideIt">
-		            <div class="alert alert-danger" >
-		              <button type="button" class="close" data-dismiss="alert">&times;</button>
-		              <strong>Oh snap!</strong> Invalid email or password !!
-		            </div>
-		        </div>
-				<form id="signupForm" class="form-horizontal" action="/Accountmate/signup" method="post">
-					<div class="form-group">
-						<div class="col-md-12">
-							<input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-12">
-							<input type="password" class="form-control" id="password" name="password" placeholder="Create a password">
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-12">
-							<button type="submit" class="btn btn-success btn-lg btn-jumbo"> Sign up for Accountmate</button>
-							<p class="text-center">By clicking "Sign up for Accountmate", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails</p>
-						</div>
-				    </div>
-				</form>
-			</div>
-		</div>
-	  </div>
-	</div>
-
 	<div class="container">
-	  <div class="row">
-		<div class="col-md-4">
-		  <h2>What we do?</h2>
-		  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<img class="img-center" src="resources/images/logo/Logo.JPG" width="100" height="100"/>
+				<h3 class="text-center">Sign in to Accountmate</h3>
+				<br/>
+			</div>
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <div id="failure" class="hideIt">
+			            <div class="alert alert-danger" >
+			              <button type="button" class="close" data-dismiss="alert">&times;</button>
+			              <strong>Oh snap!</strong> ${message}
+			            </div>
+			        </div>
+	   				<form id="loginForm" class="form-horizontal" action="/AccountmateWS2/login" method="post">
+						<div class="col-md-12">
+							<div class="form-group required">
+								<label class="control-label" for="email">Email</label>
+								<input type="email" class="form-control" id="email" name="userEmail" placeholder="Enter email address...">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group required">
+								<label class="control-label" for="password">Password</label>
+								<input type="password" class="form-control" id="password" name="userPassword" placeholder="Enter password...">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<p><a class="not-active">Forgot your password?</a></p>
+							</div>
+						</div> 
+						<div class="col-md-12">
+							<div class="form-group">
+								<button type="submit" class="btn btn-success btn-jumbo"> Sign In</button>
+							</div>
+							<div class="form-group">
+								<a data-toggle="modal" href="/Accountmate/signup" class="btn btn-primary btn-jumbo">Sign Up</a>
+							</div>
+						</div>
+					</form>
+				  </div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-4">
-		  <h2>How we do?</h2>
-		  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-	   </div>
-		<div class="col-md-4">
-		  <h2>Why we do?</h2>
-		  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-		</div>
-		<div class="col-md-12">
-			<hr/>
-		</div>
-		<div claass="col-md-12">
-			<h1 class="text-center">Our Amazing Team</h1>
-		</div>
-		<div class=" col-md-offset-4 col-md-4">
-			<img class="img-circle img-center" src="resources/images/team/sanchi.JPG" width="200" height="200">
-			<h2 class="text-center">Sanchi Goyal<br>
-				<small>Lead Designer & Developer</small></h2>
-			<ul class="list-inline text-center">
-			  <li>
-			  	<a href="https://twitter.com/" target="_blank" class="social-icon">
-			  		<i class="fa fa-twitter-square fa-2x"></i>
-			  	</a>
-			  </li>
-			  <li>
-			  	<a href="https://www.linkedin.com/in/sanchi-goyal-45312761" target="_blank" class="social-icon">
-			  		<i class="fa fa-linkedin-square fa-2x"></i>
-			  	</a>
-			  </li>
-			  <li>
-			  	<a href="https://www.facebook.com/sanchi.goyal.1" target="_blank" class="social-icon">
-			  		<i class="fa fa-facebook-square fa-2x"></i>
-			  	</a>
-			  </li>
-			</ul>
-		</div>
-	  </div>
 	</div>
-		
+	
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
-    <script src="resources/js/login.js"></script>
   </body>
 </html>

@@ -19,6 +19,12 @@
    color:red;
 }
 
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   color:grey;
+}
+
 .extraPadding20{
 	padding-left:20px;
 }

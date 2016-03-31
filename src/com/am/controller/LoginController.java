@@ -26,14 +26,14 @@ public class LoginController {
 		this.userServices = userServices;
 	}
 	
-	@RequestMapping("/login")
-	   public String getLoginPage(HttpServletRequest request,ModelMap model) {
+	@RequestMapping("/index")
+	   public String getIndexPage(HttpServletRequest request,ModelMap model) {
 			HttpSession session = request.getSession();
 			String login = null;
 			if(session.getAttribute("login") !=null){
 				login=(String)session.getAttribute("login");
 				if("success".equals(login) && session.getAttribute(UserConstants.USER_NAME)!= null){
-					return "redirect:/home"; 
+					return "redirect:/home"; // This URL is for welcome page of USER
 				}
 				model.addAttribute("success","false");
 				model.addAttribute("message",UserConstants.INVALID_USERNAME_PASSWORD);
@@ -51,7 +51,7 @@ public class LoginController {
 				session.removeAttribute("success");
 			}
 			
-	      return "access/login";
+	      return "access/index";
 	   }
 	
 	@RequestMapping("/signup")
@@ -68,12 +68,79 @@ public class LoginController {
 		return "{\"valid\":true}";
 	}
 	
+	@RequestMapping(value = "/login")
+	public String login(@ModelAttribute("Accountmate")UserProfile user, HttpServletRequest request,ModelMap model){
+		/*
+		 * I/P incorrect redirect to new login page with error message
+		 * Failure redirect to new login page
+		 * Success add variables to session & redirect to user home page
+		 * If already log in , redirect to user home page
+		 */
+		HttpSession session = request.getSession();
+		String login = null;
+		String message = null;
+		
+		/*Already log in */
+		if(session.getAttribute("login") !=null){
+			login=(String)session.getAttribute("login");
+			if("success".equals(login) && session.getAttribute(UserConstants.USER_NAME)!= null){
+				return "redirect:/home"; // This URL is for welcome page of USER
+			}
+			
+			/*
+			 * If login variable not available but session exists - invalidate the session
+			 */
+			session.invalidate();
+		}	
+		
+		if(!userServices.validateEmail(user.getEmail())){
+			message = "Email is in invalid format !!";
+			session.setAttribute("message", message);
+			session.setAttribute("login", "failure");
+			return "redirect:/loginError";
+		}
+		
+		if(userServices.validateUser(user)){
+			session.setAttribute("login","success");
+			/*
+			 * Set other attribute here
+			 */
+			return "redirect:/home";
+		}
+		
+		session.setAttribute("login", "failure");
+		return "redirect:/loginError";
+	}
+	
+	@RequestMapping(value="/loginError")
+	public String getLoginErrorPage(HttpServletRequest request, ModelMap model){
+		HttpSession session = request.getSession();
+		String login = null;
+		//	String message = null;
+		
+		/*Already log in */
+		if(session.getAttribute("login") !=null){
+			login=(String)session.getAttribute("login");
+			if("success".equals(login) && session.getAttribute(UserConstants.USER_NAME)!= null){
+				return "redirect:/home"; // This URL is for welcome page of USER
+			}
+			
+			model.addAttribute("message",session.getAttribute("message"));
+			/*
+			 * If login variable not available but session exists - invalidate the session
+			 */
+			session.invalidate();
+		}	
+		
+		return "access/login";
+	}
+	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("Accountmate")UserProfile user,HttpServletRequest request,ModelMap model){
 		/*
 		 * Put the logic for registration
 		 */
 		userServices.addUser(user);
-		return "redirect:/home";
+		return "redirect:/index";
 	}
 }

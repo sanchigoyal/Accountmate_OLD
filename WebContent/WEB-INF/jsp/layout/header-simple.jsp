@@ -23,16 +23,5 @@
 	  </button>
 	  <a class="navbar-brand" href="#">Accountmate</a>
 	</div>
-	<div id="navbar" class="navbar-collapse collapse">
-	  <form class="navbar-form navbar-right" action="/Accountmate/login" method="POST">
-		<div class="form-group">
-		  <input type="text" placeholder="Email" class="form-control" name="email">
-		</div>
-		<div class="form-group">
-		  <input type="password" placeholder="Password" class="form-control" name="password">
-		</div>
-		<button type="submit" class="btn btn-success">Sign in</button>
-	  </form>
-	</div><!--/.navbar-collapse -->
   </div>
 </nav>
