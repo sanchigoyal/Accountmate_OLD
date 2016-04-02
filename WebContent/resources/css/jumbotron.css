@@ -4,23 +4,36 @@ body {
   padding-bottom: 20px;
 }
 
-.jumbotron {
+.jumbotron-bg-dark {
 background-image: url("../images/banner/banner4.jpg");
 background-size: cover;}
 
-.jumbotron  h1 {
+.jumbotron-bg-dark  h1 {
     color: white;
 }
 
-.jumbotron  p {
+.jumbotron-bg-dark  p {
     color: white;
 }
 
-.jumbotron .form-group p {
+.jumbotron-bg-dark .form-group p {
 	font-size: 12px;
 	color: #cfcfcf;
 }
 
 .btn-jumbo{
 	width:100%;
+}
+
+.jumbotron-bg-white{
+	background-image: url("../images/banner/banner1.jpg");
+	background-size: cover;
+}
+
+.jumbotron-bg-white  h1 {
+    color: black;
+}
+
+.jumbotron-bg-white p {
+    color: black;
 }

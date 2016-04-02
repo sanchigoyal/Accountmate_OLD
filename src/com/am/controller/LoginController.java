@@ -149,7 +149,17 @@ public class LoginController {
 		return "redirect:/index";
 	}
 	
-
+	@RequestMapping("contact")
+	public String getContactDetails(ModelMap model,HttpServletRequest request){
+		
+		return "access/contact";
+	}
+	
+	@RequestMapping("aboutUs")
+	public String getAboutUsPage(ModelMap model,HttpServletRequest request){
+		return "access/about"; 
+	}
+	
 	@RequestMapping("/home")
 	public String getUserHomePage(HttpServletRequest request, ModelMap model) {
 		return "access/home";

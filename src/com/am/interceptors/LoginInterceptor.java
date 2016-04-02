@@ -26,7 +26,9 @@ public class LoginInterceptor implements HandlerInterceptor {
 													"/Accountmate/signup",
 													"/Accountmate/register",
 													"/Accountmate/login",
-													"/Accountmate/loginError"};
+													"/Accountmate/loginError",
+													"/Accountmate/contact",
+													"/Accountmate/aboutUs"};
 	
 	private static final String[] AJAX_SECURE_URI = {"/Accountmate/getEditItemPage"};
 	@Override

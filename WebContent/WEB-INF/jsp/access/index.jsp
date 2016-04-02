@@ -13,10 +13,10 @@
   
 	<!-- Header -->
     <%@include file="../layout/header-login.jsp" %>
-    <link href="resources/css/login.css" rel="stylesheet">
+    <link href="resources/css/index.css" rel="stylesheet">
 	<!-- -- --- -->
 	
-    <div class="jumbotron">
+    <div class="jumbotron jumbotron-bg-dark">
 	  <div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -58,17 +58,14 @@
 		<div class="col-md-4">
 		  <h2>What we do?</h2>
 		  <p>With a team of experience professionals and a suite of sophisticated electronic platforms,we give our client ways to strategize, track and store their daily business activities. Moreover we also provide a 24/7 support for our client's queries. </p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 		</div>
 		<div class="col-md-4">
 		  <h2>How we do?</h2>
 		  <p>We bring in IT professionals and Business Analyst from all over India to develop electronic platforms using state of the art technologies to be available on mobile, tablet and PCs.In addition to this we also interact with our clients and include their suggestions as well. </p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 	   </div>
 		<div class="col-md-4">
 		  <h2>Why we do?</h2>
 		  <p>Helping others has always been our top priority here at Accountmate. Looking at the difficulties faced with other accounting software we thought of coming up with a better solution to make lives of our client better.</p>
-		  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 		</div>
 		<div class="col-md-12">
 			<hr/>
@@ -103,6 +100,6 @@
 		
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
-    <script src="resources/js/login.js"></script>
+    <script src="resources/js/index.js"></script>
   </body>
 </html>

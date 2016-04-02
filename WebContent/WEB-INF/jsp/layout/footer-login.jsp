@@ -30,8 +30,8 @@
 		</div>
 		<div class="col-md-2 col-md-offset-4">
 			<ul class="list-inline pull-right">
-			  <li><a href="" class="text-right">Contact</a></li>
-			  <li><a href="" class="text-right">About</a></li>
+			  <li><a href="/Accountmate/contact" class="text-right">Contact</a></li>
+			  <li><a href="/Accountmate/aboutUs" class="text-right">About</a></li>
 			</ul>
 			
 			

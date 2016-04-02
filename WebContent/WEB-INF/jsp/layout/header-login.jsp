@@ -21,7 +21,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="#">Accountmate</a>
+	  <a class="navbar-brand" href="/Accountmate/index">Accountmate</a>
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
 	  <form class="navbar-form navbar-right form-inline" action="/Accountmate/login" method="POST" id="loginForm">
