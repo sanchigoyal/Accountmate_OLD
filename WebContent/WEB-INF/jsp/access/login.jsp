@@ -14,7 +14,6 @@
 	<!-- Header -->
     <%@include file="../layout/header-simple.jsp" %>
 	<!-- -- --- -->
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
@@ -35,13 +34,13 @@
 						<div class="col-md-12">
 							<div class="form-group required">
 								<label class="control-label" for="email">Email</label>
-								<input type="email" class="form-control" id="email" name="userEmail" placeholder="Enter email address...">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address...">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group required">
 								<label class="control-label" for="password">Password</label>
-								<input type="password" class="form-control" id="password" name="userPassword" placeholder="Enter password...">
+								<input type="password" class="form-control" id="password" name="password" placeholder="Enter password...">
 							</div>
 						</div>
 						<div class="col-md-12">
@@ -66,5 +65,13 @@
 	
 	<!-- Footer -->
     <%@include file="../layout/footer-login.jsp" %>
+    <script>
+    if ("${success}" == "false"){
+    	document.getElementById("failure").style.display = "block";
+    }
+    else{		
+    	document.getElementById("failure").style.display = "none";
+    }
+    </script>
   </body>
 </html>

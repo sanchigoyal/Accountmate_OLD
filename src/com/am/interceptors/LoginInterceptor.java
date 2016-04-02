@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.am.constants.UserConstants;
+
 
 
 public class LoginInterceptor implements HandlerInterceptor {
@@ -37,7 +39,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         	String login = null;
  			if(session.getAttribute("login") !=null){
  				login=(String)session.getAttribute("login");
- 				if(!"success".equals(login) || session.getAttribute("userid")== null){
+ 				if(!"success".equals(login) || session.getAttribute(UserConstants.USER_NAME)== null){
  					if(Arrays.asList(AJAX_SECURE_URI).contains(request.getRequestURI())){
  						response.sendRedirect("/Accountmate/handleAjaxSessionTimeout");
  					}else{

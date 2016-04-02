@@ -49,19 +49,26 @@ public class UserServicesImpl implements UserServices{
 	@Override
 	public boolean checkEmailAvailabity(String email) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;//Hard coded value - Replace with actual logic
 	}
 
 	@Override
 	public boolean validateUser(UserProfile user) {
 		// TODO Auto-generated method stub
-		return false;
+		/*
+		 * Step 1 - Get encrypted password and salt from DB
+		 * Step 2 - Encrypt user provided password with the salt obtained from DB
+		 * Step 3 - Compare both encrypted password
+		 */
+		return true;
 	}
 
 	@Override
 	public boolean validateEmail(String email) {
-		// TODO Auto-generated method stub
-		return false;
+		String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+	    Boolean b = false;
+	    b = email.matches(EMAIL_REGEX);
+	    return b;
 	}
 
 }

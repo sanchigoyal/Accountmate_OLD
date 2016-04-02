@@ -24,7 +24,7 @@
 	  <a class="navbar-brand" href="#">Accountmate</a>
 	</div>
 	<div id="navbar" class="navbar-collapse collapse">
-	  <form class="navbar-form navbar-right" action="/Accountmate/login" method="POST">
+	  <form class="navbar-form navbar-right form-inline" action="/Accountmate/login" method="POST" id="loginForm">
 		<div class="form-group">
 		  <input type="text" placeholder="Email" class="form-control" name="email">
 		</div>

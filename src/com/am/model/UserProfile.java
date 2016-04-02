@@ -8,10 +8,17 @@ public class UserProfile {
 	private String lastName;
 	private String email;
 	private String password;
+	private String salt; //This is used in user validation 
 	private Set<Company> companies;
 	private UserSettings setting;
 	
 	
+	public String getSalt() {
+		return salt;
+	}
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
 	public UserSettings getSetting() {
 		return setting;
 	}
