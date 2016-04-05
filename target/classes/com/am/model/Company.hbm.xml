@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.am.model">
+    <class name="Company" table="COMPANY">
+        <id name="companyID" column="company_id">
+            <generator class="native"/>
+        </id>
+        <property name="companyName" column="company_name" />
+        <property name="phoneNumber" column="phone_number" />
+        <property name="address" column="address" />
+        <property name="state" column="state" />
+        <property name="country" column="country" />
+    </class> 
+</hibernate-mapping>
